@@ -1,4 +1,4 @@
-package com.awake.hodgepodge;
+package com.awakeee.hodgepodge;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
