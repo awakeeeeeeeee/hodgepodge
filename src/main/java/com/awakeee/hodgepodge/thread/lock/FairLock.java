@@ -10,7 +10,7 @@ package com.awakeee.hodgepodge.thread.lock;
 
 import org.junit.Test;
 
-//在Java中实现公平性
+//在Java中实现公平性 这个锁还并不是真正意义上的公平锁 因为唤醒的线程是没办法控制的,可能存在某个线程一直没有被唤醒而永远处于等待状态
 public class FairLock {
 
     Lock lock = new Lock();
@@ -42,9 +42,10 @@ public class FairLock {
         private synchronized void lock(){
             while(isLock){
                 try {
+                	System.out.println("123123123");
                     System.out.println("this:"+this);
                     this.wait();
-                } catch (InterruptedException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -69,6 +70,13 @@ public class FairLock {
             for(int i=0;i<3;i++){
                 System.out.println("i:"+i +" "+Thread.currentThread().getName()+" is working");
             }
+            try {
+				Thread.sleep(1000);//加上sleep可以更好的才看出效果，因为线程1可能在线程2和线程3还未进入到wait的时候
+				//就已经执行结束了，如果这样的话 在wait前面的打印语句就不会被执行
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
             lock.unlock();
         }
     }
