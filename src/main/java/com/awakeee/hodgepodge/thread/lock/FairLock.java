@@ -11,6 +11,9 @@ package com.awakeee.hodgepodge.thread.lock;
 import org.junit.Test;
 
 //在Java中实现公平性 这个锁还并不是真正意义上的公平锁 因为唤醒的线程是没办法控制的,可能存在某个线程一直没有被唤醒而永远处于等待状态
+//这个又被称为自旋锁(while循环)
+//当isLocked为true时，调用lock()的线程在wait()调用上阻塞等待。为防止该线程没有收到notify()调用也从wait()中返回（也称作虚假唤醒），
+//这个线程会重新去检查isLocked条件以决定当前是否可以安全地继续执行还是需要重新保持等待，而不是认为线程被唤醒了就可以安全地继续执行了
 public class FairLock {
 
     Lock lock = new Lock();
