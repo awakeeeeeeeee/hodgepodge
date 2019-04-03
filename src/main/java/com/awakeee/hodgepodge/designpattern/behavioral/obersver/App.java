@@ -1,5 +1,9 @@
 package com.awakeee.hodgepodge.designpattern.behavioral.obersver;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
 public class App {
 
     public static void main(String[] args) {
@@ -19,5 +23,7 @@ public class App {
         observer.removeSubject(subject);
 
         observer.sendMsg("world");
+
+
     }
 }
