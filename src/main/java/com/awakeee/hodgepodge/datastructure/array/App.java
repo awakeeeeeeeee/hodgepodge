@@ -1,9 +1,9 @@
-package com.awakeee.hodgepodge.dataStructure.customerArray;
+package com.awakeee.hodgepodge.datastructure.array;
 
 import java.util.Date;
 import java.util.Stack;
 
-public class Array {
+public class App {
 
     public static void main(String[] args) {
 
@@ -23,6 +23,8 @@ public class Array {
         for(Integer integer : integers){
             System.out.println(integer);
         }
+
+
 
     }
 

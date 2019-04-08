@@ -1,4 +1,4 @@
-package com.awakeee.hodgepodge.dataStructure.stack;
+package com.awakeee.hodgepodge.datastructure.stack;
 
 public class App {
 

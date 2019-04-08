@@ -1,4 +1,4 @@
-package com.awakeee.hodgepodge.dataStructure.stack;
+package com.awakeee.hodgepodge.datastructure.stack;
 
 //栈 入栈和出栈都是在顶端 ,后进先出
 public class Stack<Item> {
