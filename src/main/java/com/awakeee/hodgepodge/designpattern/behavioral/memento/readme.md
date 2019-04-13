@@ -1,0 +1,7 @@
+Originator是需要保存和恢复其状态的对象，它使用内部类来保存Object的状态。内部类称为Memento，它是私有的，因此无法从其他对象访问它。
+
+Caretaker是帮助类，负责通过Memento对象存储和恢复Originator的状态。由于Memento是Originator的私人，因此Caretaker无法访问它，并且它作为对象存储在看管人中。
+
+Memento模式简单易实现，需要注意的一点是Memento类只能访问Originator对象。同样在客户端应用程序中，我们应该使用看守者对象来保存和恢复发起者状态。
+
+此外，如果Originator对象具有不可变的属性，我们应该使用深度复制或克隆来避免数据完整性问题，就像我在上面的示例中使用的那样。我们可以使用序列化来实现更通用的memento模式实现，而不是Memento模式，其中每个对象都需要拥有自己的Memento类实现。
