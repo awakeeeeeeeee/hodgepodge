@@ -79,7 +79,7 @@ public class WaitAndNotify {
                 System.out.println("线程"+Thread.currentThread().getName()+"准备唤醒");
                 shareData.setFlag(false);
                 //shareData.notify();
-                shareData.notifyAll();//当存在多个等待线程当时候，必需唤醒全部，否则会有等待线程一直处于等待状态
+                shareData.notifyAll();//当存在多个等待线程等待的时候，必需唤醒全部，否则会有等待线程一直处于等待状态
                 System.out.println("线程"+Thread.currentThread().getName()+"唤醒结束");
             }
         }
