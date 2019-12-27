@@ -6,6 +6,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;
+import io.netty.channel.nio.NioEventLoop;
 import io.netty.util.CharsetUtil;
 import io.netty.util.concurrent.GlobalEventExecutor;
 
@@ -22,6 +23,15 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
 //        ctx.writeAndFlush("好的，我收到了");
         ctx.writeAndFlush(Unpooled.copiedBuffer("好的，我收到了", CharsetUtil.UTF_8));
 //        ctx.channel().writeAndFlush("xxxx");
+        NioEventLoop nioEventLoop = (NioEventLoop) ctx.channel().eventLoop();
+        System.out.println(nioEventLoop.pendingTasks());
+        nioEventLoop.execute(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println(1111);
+            }
+        });
+        System.out.println(nioEventLoop.pendingTasks());
     }
 
 

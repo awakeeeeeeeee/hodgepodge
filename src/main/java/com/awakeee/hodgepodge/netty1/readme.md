@@ -51,6 +51,12 @@ https://www.cnblogs.com/tubujia/p/11310208.html
 
 ![Image text](/Users/cool/numb/book/scalable_io_in_java.png)
 
+
+
+
+
+![Image text](/Users/cool/numb/book/netty_start_process.png)
+
 Reactor
 
 reactor模式的角色构成（5种）

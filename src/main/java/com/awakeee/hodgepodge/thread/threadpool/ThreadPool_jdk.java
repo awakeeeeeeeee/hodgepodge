@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ThreadPool_jdk {
 
+    private static int i=0;
 
     public static void main(String[] args) {
 
@@ -33,6 +34,12 @@ public class ThreadPool_jdk {
 
         @Override
         public void run() {
+//            try {
+//                Thread.sleep(100);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//            System.out.println("i= "+ i++);
             System.out.println("正在执行task "+taskNum);
             try {
                 Thread.currentThread().sleep(4000);

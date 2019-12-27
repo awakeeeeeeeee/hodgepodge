@@ -1,0 +1,2 @@
+委派模式
+springmvc通过这种模式来分发请求执行的controller

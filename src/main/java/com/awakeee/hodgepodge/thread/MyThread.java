@@ -18,6 +18,7 @@ public class MyThread {
         Process p = new Process();
         for(int i=0;i<5;i++){
             Thread t = new Thread(p);
+//            t.setDaemon(true);
             t.start();
         }
 
