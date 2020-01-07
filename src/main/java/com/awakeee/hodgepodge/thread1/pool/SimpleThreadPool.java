@@ -61,7 +61,8 @@ public class SimpleThreadPool {
 //                    System.out.println(workernum == corenum);
                     while (workernum == corenum) {
                         System.out.println("queue size: "+queue.size());
-                        while (queue.isEmpty()) {
+                        while (queue.isEmpty()) {//这行判断不可能返回true,相当于是没有用的，因为当创建的线程数满了的时候，队列里面已经有任务被
+                            //添加进来了
                             try {
                                 this.setThreadStatus(ThreadStatus.BLOCKED);
                                 System.out.println(Thread.currentThread().getName() + "进入等待....");
