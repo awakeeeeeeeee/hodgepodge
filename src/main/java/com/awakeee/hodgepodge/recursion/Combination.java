@@ -62,7 +62,7 @@ public class Combination {
             }
 
             if(temp == datas.size()){
-//                System.out.println("list:"+list.toString());
+//                System.out.println("threadlocal:"+threadlocal.toString());
                 fromindex++;
             }
 

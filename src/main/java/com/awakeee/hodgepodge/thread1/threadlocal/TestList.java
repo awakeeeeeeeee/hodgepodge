@@ -1,4 +1,4 @@
-package com.awakeee.hodgepodge.thread1.list;
+package com.awakeee.hodgepodge.thread1.threadlocal;
 
 import org.junit.Test;
 import org.springframework.util.CollectionUtils;
@@ -39,7 +39,7 @@ public class TestList {
     private void aa(){
         List<String> list = threadLocal.get();
         if(CollectionUtils.isEmpty(list)){
-//            System.out.println(Thread.currentThread().getName() + " list is "+list);
+//            System.out.println(Thread.currentThread().getName() + " threadlocal is "+threadlocal);
             list = new ArrayList<>();
         }
         for(int i=0;i<10;i++){
@@ -49,7 +49,7 @@ public class TestList {
         threadLocal.set(list);
 
         List<String> list1 = threadLocal.get();
-        System.out.println(Thread.currentThread().getName() + "list.size() " +list.size());
+        System.out.println(Thread.currentThread().getName() + "threadlocal.size() " +list.size());
 
         for(String s : list1){
             System.out.println(s);
@@ -62,7 +62,7 @@ public class TestList {
             list.add(String.valueOf(i));
         }
 
-        System.out.println(Thread.currentThread().getName() + "list.size() " +list.size());
+        System.out.println(Thread.currentThread().getName() + "threadlocal.size() " +list.size());
 
         for (String s : list){
             System.out.println(s);

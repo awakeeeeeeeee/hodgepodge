@@ -133,7 +133,7 @@ public class NodeService {
 
     //将并联的各个节点组成一个单元
     private Union getUnion(List<Map<String,Double>> maps){
-//        List<String> list = new ArrayList<>();
+//        List<String> threadlocal = new ArrayList<>();
 //        Double val = 1.0;
 //
 //        for(Map<String,Double> map : maps){
@@ -141,7 +141,7 @@ public class NodeService {
 //            Iterator<Map.Entry<String, Double>> it = map.entrySet().iterator();
 //            while (it.hasNext()) {
 //                Map.Entry<String, Double> entry = it.next();
-//                list.add(entry.getKey());
+//                threadlocal.add(entry.getKey());
 //                val *= entry.getValue();
 //            }
 //
@@ -150,7 +150,7 @@ public class NodeService {
 //        Iterator<Map.Entry<String, Double>> it = map.entrySet().iterator();
 //        while (it.hasNext()) {
 //            Map.Entry<String, Double> entry = it.next();
-//            list.add(entry.getKey());
+//            threadlocal.add(entry.getKey());
 //            val *= entry.getValue();
 //        }
 //
@@ -158,12 +158,12 @@ public class NodeService {
 //        Iterator<Map.Entry<String, Double>> it1 = map.entrySet().iterator();
 //        while (it1.hasNext()) {
 //            Map.Entry<String, Double> entry = it.next();
-//            list.add(entry.getKey());
+//            threadlocal.add(entry.getKey());
 //            val1 *= entry.getValue();
 //        }
 //
 //        Double res = 1 - (1-val)*(1-val1);
-//        return new Union(list,res);
+//        return new Union(threadlocal,res);
         return null;
     }
 
